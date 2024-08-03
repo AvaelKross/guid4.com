@@ -1,6 +1,9 @@
 <html>
     <head>
         <title>GUID 4 Generator</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sankofa+Display&display=swap" rel="stylesheet">
         <script>
             function uuidv4() {
   return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
@@ -10,12 +13,32 @@
             makeGood = function() {
                 document.getElementById("guid").value =uuidv4();
             }
+
+            copy = function() {
+                var copyText = document.getElementById("guid");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+   // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+            }
+            makeGood();
         </script>
+        <style>
+            body {    background-color: coral;}
+            h1 {     font-family: "Sankofa Display", sans-serif;
+    color: honeydew;}
+            #guid {    margin-left: 10px;
+    width: 300px;}
+        </style>
     </head>
     <body>
-        <h1>Hello this is your GUID: 96351ee4-9c0c-44d9-986e-de28ab93342c</h1>
+        <h1>GUID4.com</h1>
         <div>
-            <button id="button" onclick="makeGood()">Generate!</button><input id="guid" disabled></input>
+            <button id="button" onclick="makeGood()">Generate new GUID!</button><input id="guid" disabled></input>
+            <button id="copy" onclick="copy()">Copy to Clipboard</button>
         </div>
     </body>
 </html>
