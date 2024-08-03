@@ -4,6 +4,21 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sankofa+Display&display=swap" rel="stylesheet">
+        
+        <style>
+            body {    background-color: coral;}
+            h1 {     font-family: "Sankofa Display", sans-serif;
+    color: honeydew;}
+            #guid {    margin-left: 10px;
+    width: 300px;}
+        </style>
+    </head>
+    <body>
+        <h1>GUID4.com</h1>
+        <div>
+            <button id="button" onclick="makeGood()">Generate new GUID!</button><input id="guid" disabled></input>
+            <button id="copy" onclick="copy()">Copy to Clipboard</button>
+        </div>
         <script>
             function uuidv4() {
   return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
@@ -26,19 +41,5 @@
             }
             makeGood();
         </script>
-        <style>
-            body {    background-color: coral;}
-            h1 {     font-family: "Sankofa Display", sans-serif;
-    color: honeydew;}
-            #guid {    margin-left: 10px;
-    width: 300px;}
-        </style>
-    </head>
-    <body>
-        <h1>GUID4.com</h1>
-        <div>
-            <button id="button" onclick="makeGood()">Generate new GUID!</button><input id="guid" disabled></input>
-            <button id="copy" onclick="copy()">Copy to Clipboard</button>
-        </div>
     </body>
 </html>
