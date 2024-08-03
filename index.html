@@ -1,8 +1,21 @@
 <html>
     <head>
         <title>GUID 4 Generator</title>
+        <script>
+            function uuidv4() {
+  return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
+    (+c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> +c / 4).toString(16)
+  );
+}
+            $("#id").on('click', function() {
+                $("#guid").value(uuidv4());
+            })
+        </script>
     </head>
     <body>
         <h1>Hello this is your GUID: 96351ee4-9c0c-44d9-986e-de28ab93342c</h1>
+        <div>
+            <button id="button">Generate!</button><input id="guid" disabled></input>
+        </div>
     </body>
 </html>
