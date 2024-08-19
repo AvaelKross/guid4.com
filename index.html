@@ -1,6 +1,8 @@
 <html>
     <head>
         <title>GUID UUID 4 Generator</title>
+        <meta name="description" content="Generate GUID (UUID 4) Easily Online!">
+
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7768023655717222"
      crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -8,51 +10,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Sankofa+Display&display=swap" rel="stylesheet">
         
         <style>
-            body {    background-color: coral;}
+            body {    background-color: #ffebe4;}
             h1 {     font-family: "Sankofa Display", sans-serif;
     color: honeydew;}
             #guid {    margin-left: 10px;
     width: 300px;}
+            .centered-block {
+                margin-top: 30px;
+                min-width: 80%;
+                width: 50%;
+                margin-left: 30%;
+            }
         </style>
     </head>
     <body>
-        <h1>GUID4.com</h1>
+        <div class="centered-block">
+            <h1>GUID4.com</h1>
+            <div>
+                <button id="button" onclick="makeGood()">Generate new GUID!</button><input id="guid" disabled></input>
+                <button id="copy" onclick="copy()">Copy to Clipboard</button>
+            </div>
+            <div style="margin-top: 20px">Click the button above to generate new UUID v.4 (also known as GUID).</div>
         <div>
-            <button id="button" onclick="makeGood()">Generate new GUID!</button><input id="guid" disabled></input>
-            <button id="copy" onclick="copy()">Copy to Clipboard</button>
-        </div>
-        <div>
-            Spanish: generar GUID UUID 4
-French: générer un GUID UUID 4
-German: GUID UUID 4 erzeugen
-Italian: generare GUID UUID 4
-Portuguese: gerar GUID UUID 4
-Russian: создать GUID UUID 4 (создать уникальный идентификатор)
-Chinese (Simplified): 生成GUID UUID 4
-Japanese: GUIDを生成する (GUID UUID 4を生成する)
-Korean: GUID UUID 4 생성
-Arabic: إنشاء GUID UUID 4 (توليد معرف فريد)
-Dutch: GUID UUID 4 genereren
-Turkish: GUID UUID 4 oluştur
-Hindi: GUID UUID 4 उत्पन्न करें (GUID उत्पन्न करें)
-Greek: δημιουργία GUID UUID 4
-Polish: generowanie GUID UUID 4
-Swedish: generera GUID UUID 4
-Finnish: luo GUID UUID 4
-Norwegian: generer GUID UUID 4
-Danish: generer GUID UUID 4
-Czech: generovat GUID UUID 4
-Hungarian: GUID UUID 4 generálása
-Romanian: genera GUID UUID 4
-Thai: สร้าง GUID UUID 4
-Vietnamese: tạo GUID UUID 4
-Hebrew: ליצור GUID UUID 4 (ליצור מזהה ייחודי)
-Indonesian: menghasilkan GUID UUID 4
-Malay: jana GUID UUID 4
-Ukrainian: створити GUID UUID 4 (генерація унікального ідентифікатора)
-Bengali: GUID UUID 4 তৈরি করুন
-Persian: ایجاد GUID UUID 4 (تولید شناسه یکتا)
-        </div>
         <script>
             function uuidv4() {
   return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
